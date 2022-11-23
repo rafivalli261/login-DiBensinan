@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LoginDiBensinan</string>
+    <string name="rx_email">Email</string>
+    <string name="rx_password">Password</string>
+    <string name="btn_logout">Logout</string>
+    <string name="km_lg_butuh">Lagi Butuh DiBensinan?</string>
+    <string name="halo_om">Halo, Kak ...</string>
+
+</resources>

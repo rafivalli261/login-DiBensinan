@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "19891948753",
+    "firebase_url": "https://coba-project-a5119-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "coba-project-a5119",
+    "storage_bucket": "coba-project-a5119.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19891948753:android:422827ee6703fb183a09f0",
+        "android_client_info": {
+          "package_name": "com.iothon.logindibensinan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "19891948753-nsb011ruhb4qie3in3454n4q6omqkfid.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iothon.logindibensinan",
+            "certificate_hash": "afee21eab1f0eef4093747875a271939b05588cb"
+          }
+        },
+        {
+          "client_id": "19891948753-su04ib61ogudrl4brs6p40de3v38101c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHsjKnG4j_W8ovBDSp6ypy4xJ6stIWqXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "19891948753-su04ib61ogudrl4brs6p40de3v38101c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
