@@ -36,7 +36,7 @@
   <h3 align="center">DiBensinan</h3>
 
   <p align="center">
-    Aplikasi Yang Sangat Bermanfaat!
+    Aplikasi Yang Sangat Jelek!
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
@@ -85,9 +85,9 @@ There are many great README templates available on GitHub; however, I didn't fin
 
 Here's why:
 
--  Your time should be focused on creating something amazing. A project that solves a problem and helps others
--  You shouldn't be doing the same tasks over and over like creating a README from scratch
--  You should implement DRY principles to the rest of your life :smile:
+- Your time should be focused on creating something amazing. A project that solves a problem and helps others
+- You shouldn't be doing the same tasks over and over like creating a README from scratch
+- You should implement DRY principles to the rest of your life :smile:
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
@@ -99,14 +99,14 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
--  [![Next][next.js]][next-url]
--  [![React][react.js]][react-url]
--  [![Vue][vue.js]][vue-url]
--  [![Angular][angular.io]][angular-url]
--  [![Svelte][svelte.dev]][svelte-url]
--  [![Laravel][laravel.com]][laravel-url]
--  [![Bootstrap][bootstrap.com]][bootstrap-url]
--  [![JQuery][jquery.com]][jquery-url]
+- [![Next][next.js]][next-url]
+- [![React][react.js]][react-url]
+- [![Vue][vue.js]][vue-url]
+- [![Angular][angular.io]][angular-url]
+- [![Svelte][svelte.dev]][svelte-url]
+- [![Laravel][laravel.com]][laravel-url]
+- [![Bootstrap][bootstrap.com]][bootstrap-url]
+- [![JQuery][jquery.com]][jquery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,10 +121,10 @@ To get a local copy up and running follow these simple example steps.
 
 This is an example of how to list things you need to use the software and how to install them.
 
--  npm
-   ```sh
-   npm install npm@latest -g
-   ```
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
 ### Installation
 
@@ -160,13 +160,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
--  [x] Add Changelog
--  [x] Add back to top links
--  [ ] Add Additional Templates w/ Examples
--  [ ] Add "components" document to easily copy & paste sections of the readme
--  [ ] Multi-language Support
-   -  [ ] Chinese
-   -  [ ] Spanish
+- [x] Add Changelog
+- [x] Add back to top links
+- [ ] Add Additional Templates w/ Examples
+- [ ] Add "components" document to easily copy & paste sections of the readme
+- [ ] Multi-language Support
+  - [ ] Chinese
+  - [ ] Spanish
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
@@ -213,14 +213,14 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
--  [Choose an Open Source License](https://choosealicense.com)
--  [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
--  [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
--  [Malven's Grid Cheatsheet](https://grid.malven.co/)
--  [Img Shields](https://shields.io)
--  [GitHub Pages](https://pages.github.com)
--  [Font Awesome](https://fontawesome.com)
--  [React Icons](https://react-icons.github.io/react-icons/search)
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+- [Malven's Grid Cheatsheet](https://grid.malven.co/)
+- [Img Shields](https://shields.io)
+- [GitHub Pages](https://pages.github.com)
+- [Font Awesome](https://fontawesome.com)
+- [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
