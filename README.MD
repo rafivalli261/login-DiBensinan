@@ -36,7 +36,7 @@
   <h3 align="center">DiBensinan</h3>
 
   <p align="center">
-    Aplikasi Pencari Tuhan Jilid 6!
+    Aplikasi Yang Sangat Bermanfaat!
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
