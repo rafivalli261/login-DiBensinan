@@ -47,22 +47,52 @@
         app:layout_constraintVertical_bias="0.146" />
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="350dp"
         android:layout_height="80dp"
         android:background="@drawable/bg_saldo_bar"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.331">
+        app:layout_constraintVertical_bias="0.328">
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_saldo_bar"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328">
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_Logout"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_login"
+        android:gravity="center_horizontal"
+        android:text="@string/btn_logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:layout_width="412dp"
         android:layout_height="382dp"
         android:background="@drawable/bg_saldo_bar"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
