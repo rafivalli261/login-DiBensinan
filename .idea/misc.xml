@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Rafi/Repo/LoginDiBensinan/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Rafi/Repo/LoginDiBensinan/app/src/main/res/layout/activity_register.xml" value="0.4" />
+=======
+        <entry key="..\:/s5/MOBPROG/DiBensinan/login-DiBensinan/app/src/main/res/layout/activity_dashboard.xml" value="0.1" />
+        <entry key="..\:/s5/MOBPROG/DiBensinan/login-DiBensinan/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/s5/MOBPROG/DiBensinan/login-DiBensinan/app/src/main/res/layout/activity_profile.xml" value="0.264" />
+>>>>>>> 8f364397589f00145ed0a05d69dd8918a5072dae
       </map>
     </option>
   </component>

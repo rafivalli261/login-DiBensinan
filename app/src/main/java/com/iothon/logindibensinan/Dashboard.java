@@ -28,7 +28,6 @@ import java.util.Arrays;
 public class Dashboard extends AppCompatActivity {
 
     private FirebaseAuth ojoLali;
-    private Button btnLogout;
     private FirebaseUser userSekarang;
     private TextView haloOm;
     private FirebaseFirestore db;
@@ -41,7 +40,6 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         ojoLali = FirebaseAuth.getInstance();
-        btnLogout = findViewById(R.id.btn_Logout);
         haloOm = findViewById(R.id.salamSatuJiwa);
         userSekarang = ojoLali.getCurrentUser();
         Profile = (ImageView) findViewById(R.id.Profile);
@@ -65,6 +63,7 @@ public class Dashboard extends AppCompatActivity {
                     }
                 });
 
+<<<<<<< HEAD
         // haloOm.setText(String.format("Halo, Kak %s", namakuBento));
         // Button untuk Sign Out
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +73,9 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(new Intent(Dashboard.this, MainActivity.class));
             }
         });
+=======
+        haloOm.setText(String.format("Halo, Kak %s", namakuBento));
+>>>>>>> 8f364397589f00145ed0a05d69dd8918a5072dae
 
         // Tombol untuk menuju ke Profile
         Profile.setOnClickListener(new View.OnClickListener() {
