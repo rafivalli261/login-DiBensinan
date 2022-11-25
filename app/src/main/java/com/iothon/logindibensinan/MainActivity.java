@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
     public void BukaRegister(){
         Intent BukaActRegister = new Intent(getApplicationContext(),Register.class);
         startActivity(BukaActRegister);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = ojoLali.getCurrentUser();
+        if(currentUser != null){
+            startActivity(new Intent(MainActivity.this, Dashboard.class));
+        }
     }
 
     private void loginPengguna(){

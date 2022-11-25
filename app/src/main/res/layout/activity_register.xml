@@ -50,15 +50,16 @@
             android:background="@drawable/bg_button_login">
 
             <EditText
+                android:id="@+id/nama_Daftar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:textColor="@color/white"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:padding="0dp"
+                android:backgroundTint="@color/transparent"
                 android:hint="Name"
-                android:backgroundTint="@color/transparent"></EditText>
+                android:padding="0dp"
+                android:textColor="@color/white"></EditText>
         </LinearLayout>
 
         <LinearLayout
@@ -70,15 +71,16 @@
             android:background="@drawable/bg_button_login">
 
             <EditText
+                android:id="@+id/email_Daftar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:textColor="@color/white"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:padding="0dp"
+                android:backgroundTint="@color/transparent"
                 android:hint="Email"
-                android:backgroundTint="@color/transparent"></EditText>
+                android:padding="0dp"
+                android:textColor="@color/white"></EditText>
         </LinearLayout>
 
         <LinearLayout
@@ -90,15 +92,16 @@
             android:background="@drawable/bg_button_login">
 
             <EditText
+                android:id="@+id/alama_Daftar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:textColor="@color/white"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:padding="0dp"
+                android:backgroundTint="@color/transparent"
                 android:hint="Address"
-                android:backgroundTint="@color/transparent"></EditText>
+                android:padding="0dp"
+                android:textColor="@color/white"></EditText>
         </LinearLayout>
 
         <LinearLayout
@@ -108,17 +111,19 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_button_login">
+
             <EditText
+                android:id="@+id/password_Daftar"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:padding="0dp"
-                android:textColor="@color/white"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
+                android:backgroundTint="@color/transparent"
                 android:hint="Password"
-                android:backgroundTint="@color/transparent"></EditText>
+                android:inputType="textPassword"
+                android:padding="0dp"
+                android:textColor="@color/white"></EditText>
         </LinearLayout>
 
         <Button
