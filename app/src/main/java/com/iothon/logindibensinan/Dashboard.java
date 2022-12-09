@@ -31,6 +31,7 @@ public class Dashboard extends AppCompatActivity {
     private FirebaseUser userSekarang;
     private TextView haloOm;
     private FirebaseFirestore db;
+    private Button kePesan;
 //    private String namakuBento;
     ImageView Profile;
 
@@ -43,6 +44,7 @@ public class Dashboard extends AppCompatActivity {
         haloOm = findViewById(R.id.salamSatuJiwa);
         userSekarang = ojoLali.getCurrentUser();
         Profile = (ImageView) findViewById(R.id.Profile);
+        kePesan = findViewById(R.id.pesan_kasana);
         db = FirebaseFirestore.getInstance();
 
         // Query untuk menampilkan Nama pada dashboard
@@ -63,19 +65,11 @@ public class Dashboard extends AppCompatActivity {
                     }
                 });
 
-<<<<<<< HEAD
         // haloOm.setText(String.format("Halo, Kak %s", namakuBento));
         // Button untuk Sign Out
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ojoLali.signOut();
-                startActivity(new Intent(Dashboard.this, MainActivity.class));
-            }
-        });
-=======
-        haloOm.setText(String.format("Halo, Kak %s", namakuBento));
->>>>>>> 8f364397589f00145ed0a05d69dd8918a5072dae
+//=======
+//        haloOm.setText(String.format("Halo, Kak %s", namakuBento));
+//>>>>>>> 8f364397589f00145ed0a05d69dd8918a5072dae
 
         // Tombol untuk menuju ke Profile
         Profile.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +77,14 @@ public class Dashboard extends AppCompatActivity {
             public void onClick(View view) {
                 Intent Profile = new Intent(getApplicationContext(),Profile.class);
                 startActivity(Profile);
+            }
+        });
+
+        // tombol untuk menuju halaman pemesanan
+        kePesan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Dashboard.this, Pesan.class));
             }
         });
     }

@@ -1,8 +1,10 @@
 package com.iothon.logindibensinan;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth ojoLali;
     private EditText rxEmail, rxPassword;
-
+    private int backButtonCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent Login = new Intent(getApplicationContext(),Dashboard.class);
-//                startActivity(Login);
                 loginPengguna();
             }
         });
@@ -89,6 +89,21 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             });
+        }
+    }
+
+    // blok kode untuk keluar dari aplikasi
+    @Override
+    public void onBackPressed() {
+        if(backButtonCount >= 1)
+        {
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Tekan tombol kembali sekali lagi untuk keluar dari aplikasi", Toast.LENGTH_SHORT).show();
+            backButtonCount++;
         }
     }
 }

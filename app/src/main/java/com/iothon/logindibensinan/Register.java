@@ -29,17 +29,19 @@ public class Register extends AppCompatActivity {
     private Button btnRegister;
     private FirebaseAuth ojoLali;
     private FirebaseFirestore db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
         namaDaftar = findViewById(R.id.nama_Daftar);
-        emailDaftar = findViewById(R.id.email_Daftar);
+        emailDaftar = findViewById(R.id.nama_user);
         alamatDaftar = findViewById(R.id.alama_Daftar);
         passwordDaftar = findViewById(R.id.password_Daftar);
         btnRegister = findViewById(R.id.btnRegisterDB);
         ojoLali = FirebaseAuth.getInstance();
+
         // Access a Cloud Firestore instance from your Activity
         db = FirebaseFirestore.getInstance();
         btnRegister.setOnClickListener(new View.OnClickListener() {

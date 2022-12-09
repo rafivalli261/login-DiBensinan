@@ -1,9 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Pesan">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/jdl_pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_weight="0"
+            android:fontFamily="cursive"
+            android:text="@string/jdl_pesan"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/nama_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/transparent"
+            android:hint="@string/nama_user_pesan"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="0dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/jns_bensin_pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/transparent"
+            android:hint="@string/jns_bensin"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="0dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/jml_bensin_pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/transparent"
+            android:hint="@string/jml_bensin_pesan"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="0dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/no_wa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/transparent"
+            android:hint="@string/no_hp_user_pesan"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            android:padding="0dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/fl_loc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/transparent"
+            android:hint="@string/fl_loc"
+            android:inputType=""
+            android:minHeight="48dp"
+            android:padding="0dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/nama_mitra_pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/transparent"
+            android:hint="@string/nama_mitra_pesan"
+            android:inputType=""
+            android:minHeight="48dp"
+            android:padding="0dp"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_kirim_pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/teal_200"
+            android:text="@string/btn_kirim"
+            android:layout_margin="10dp"
+            android:textColor="@color/design_default_color_primary_dark"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

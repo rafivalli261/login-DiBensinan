@@ -71,7 +71,7 @@
             android:background="@drawable/bg_button_login">
 
             <EditText
-                android:id="@+id/email_Daftar"
+                android:id="@+id/nama_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
