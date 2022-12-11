@@ -23,16 +23,17 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 
 public class Dashboard extends AppCompatActivity {
 
-    private FirebaseAuth ojoLali;
-    private FirebaseUser userSekarang;
     private TextView haloOm;
-    private FirebaseFirestore db;
-    private Button kePesan;
-//    private String namakuBento;
+    private String namaku;
+    FirebaseAuth ojoLali;
+    FirebaseUser userSekarang;
+    FirebaseFirestore db;
+    Button kePesan;
     ImageView Profile;
 
     @Override
@@ -47,6 +48,7 @@ public class Dashboard extends AppCompatActivity {
         kePesan = findViewById(R.id.pesan_kasana);
         db = FirebaseFirestore.getInstance();
 
+
         // Query untuk menampilkan Nama pada dashboard
         Query namaBerjaya = db.collection("penggunaHokya").whereIn("email", Arrays.asList(userSekarang.getEmail()));
         namaBerjaya.get()
@@ -55,21 +57,14 @@ public class Dashboard extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                // Log.d(TAG, document.getId() + " => " + document.getData());
-                                // namakuBento = (String) document.getData().get("nama");
-                                 haloOm.setText(String.format("Halo, Kak %s", document.getData().get("nama")));
+                                 namaku = Objects.requireNonNull(document.getData().get("nama")).toString();
+                                 haloOm.setText(namaku);
                             }
                         } else {
                             Log.d(TAG, "Error getting documents: ", task.getException());
                         }
                     }
                 });
-
-        // haloOm.setText(String.format("Halo, Kak %s", namakuBento));
-        // Button untuk Sign Out
-//=======
-//        haloOm.setText(String.format("Halo, Kak %s", namakuBento));
-//>>>>>>> 8f364397589f00145ed0a05d69dd8918a5072dae
 
         // Tombol untuk menuju ke Profile
         Profile.setOnClickListener(new View.OnClickListener() {
@@ -89,13 +84,4 @@ public class Dashboard extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        FirebaseUser currentUser = ojoLali.getCurrentUser();
-//        if(currentUser != null){
-//            startActivity(new Intent(Dashboard.this, MainActivity.class));
-//        }
-//
-//    }
 }
