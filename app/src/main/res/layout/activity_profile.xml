@@ -9,6 +9,7 @@
     tools:context=".Profile">
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="105dp"
         android:layout_height="107dp"
         android:layout_marginVertical="20dp"
@@ -18,21 +19,24 @@
         app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"/>
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
+        android:id="@+id/nama_profile"
         android:layout_width="250sp"
         android:layout_height="50sp"
-        android:text="Ibnu Hasballah"
+        android:text="@string/nama_user_pesan"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098"/>
+        app:layout_constraintVertical_bias="0.088"
+        android:layout_marginStart="20dp"
+        />
 
     <ImageView
         android:id="@+id/imageView"
@@ -41,10 +45,10 @@
         android:src="@drawable/progressbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.691"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.146" />
+        app:layout_constraintVertical_bias="0.135" />
 
     <LinearLayout
         android:id="@+id/linearLayout5"

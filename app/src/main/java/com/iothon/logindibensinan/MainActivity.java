@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     FirebaseUser userSekarang;
     private String namaku;
     private String peranku;
+    private String emailku;
+    private String alamatku;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,14 +122,19 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 if (Objects.requireNonNull(document.getData().get("email")).toString().equals(rxEmail.getText().toString())){
-                                    Log.d(TAG, Objects.requireNonNull(document.getData().get("email")).toString());
                                     namaku = Objects.requireNonNull(document.getData().get("nama")).toString();
                                     peranku = Objects.requireNonNull(document.getData().get("peran")).toString();
+                                    emailku = Objects.requireNonNull(document.getData().get("email")).toString();
+                                    alamatku = Objects.requireNonNull(document.getData().get("alamat")).toString();
                                 }
                             }
                             if (peranku.equals("user")){
                                 Toast.makeText(MainActivity.this, "Pengguna berhasil login dengan aman", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(MainActivity.this, Dashboard.class));
+                                Intent paketDashboard = new Intent(MainActivity.this, Dashboard.class);
+                                paketDashboard.putExtra(Dashboard.EXTRA_NAMA, namaku);
+                                paketDashboard.putExtra(Dashboard.EXTRA_EMAIL, emailku);
+                                paketDashboard.putExtra(Dashboard.EXTRA_ALAMAT, alamatku);
+                                startActivity(paketDashboard);
                             } else {
                                 ojoLali.signOut();
                                 Toast.makeText(MainActivity.this, "Kamu Siapa?", Toast.LENGTH_SHORT).show();

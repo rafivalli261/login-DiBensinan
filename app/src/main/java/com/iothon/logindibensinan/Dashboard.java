@@ -29,12 +29,14 @@ import java.util.Objects;
 public class Dashboard extends AppCompatActivity {
 
     private TextView haloOm;
-    private String namaku;
     FirebaseAuth ojoLali;
     FirebaseUser userSekarang;
     FirebaseFirestore db;
     Button kePesan;
     ImageView Profile;
+    public static final String EXTRA_NAMA = "extra_age";
+    public static final String EXTRA_ALAMAT = "extra_alamat";
+    public static final String EXTRA_EMAIL = "extra_email";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,28 +51,17 @@ public class Dashboard extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
 
-        // Query untuk menampilkan Nama pada dashboard
-        Query namaBerjaya = db.collection("penggunaHokya").whereIn("email", Arrays.asList(userSekarang.getEmail()));
-        namaBerjaya.get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                 namaku = Objects.requireNonNull(document.getData().get("nama")).toString();
-                                 haloOm.setText(namaku);
-                            }
-                        } else {
-                            Log.d(TAG, "Error getting documents: ", task.getException());
-                        }
-                    }
-                });
+        // fungsi untuk menampilkan Nama pada dashboard
+        tampilkanNama();
 
         // Tombol untuk menuju ke Profile
         Profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent Profile = new Intent(getApplicationContext(),Profile.class);
+                Profile.putExtra(Dashboard.EXTRA_NAMA, getIntent().getStringExtra(EXTRA_NAMA));
+                Profile.putExtra(Dashboard.EXTRA_EMAIL, getIntent().getStringExtra(EXTRA_EMAIL));
+                Profile.putExtra(Dashboard.EXTRA_ALAMAT, getIntent().getStringExtra(EXTRA_ALAMAT));
                 startActivity(Profile);
             }
         });
@@ -82,6 +73,11 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(new Intent(Dashboard.this, Pesan.class));
             }
         });
+    }
+
+    public void tampilkanNama(){
+        String nama = getIntent().getStringExtra(EXTRA_NAMA);
+        haloOm.setText(nama);
     }
 
 }
