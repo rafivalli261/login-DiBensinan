@@ -84,6 +84,7 @@ public class Register extends AppCompatActivity {
                         pengguna.put("alamat", alamat);
                         pengguna.put("email", email);
                         pengguna.put("nama", nama);
+                        pengguna.put("peran", "user");
 
                         // Add a new document with a generated ID
                         db.collection("penggunaHokya")
