@@ -3,8 +3,9 @@
     <string name="rx_email">Email</string>
     <string name="rx_password">Password</string>
     <string name="btn_logout">Logout</string>
+    <string name="btn_update">Update</string>
     <string name="km_lg_butuh">Lagi Butuh DiBensinan?</string>
-    <string name="halo_om">Halo, Kak ...</string>
+    <string name="halo_om">Halo, Kak</string>
     <string name="jdl_pesan">Halaman Pemesanan</string>
     <string name="jns_bensin">Jenis Bensin</string>
     <string name="nama_user_pesan">Nama</string>

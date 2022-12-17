@@ -51,8 +51,34 @@ public class Dashboard extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
 
-        // fungsi untuk menampilkan Nama pada dashboard
-        tampilkanNama();
+        // Query untuk menampilkan Nama pada dashboard
+        Query namaBerjaya = db.collection("penggunaHokya").whereIn("email", Arrays.asList(userSekarang.getEmail()));
+        namaBerjaya.get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Log.d(TAG, document.getId() + " => " + document.getData());
+                                // namakuBento = (String) document.getData().get("nama");
+                                haloOm.setText(String.format("Halo, Kak %s", document.getData().get("nama")));
+                            }
+                        } else {
+                            Log.d(TAG, "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+
+        // haloOm.setText(String.format("Halo, Kak %s", namakuBento));
+        // Button untuk Sign Out
+//        btnLogout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ojoLali.signOut();
+//                startActivity(new Intent(Dashboard.this, MainActivity.class));
+//            }
+//        });
+        haloOm.setText(String.format("Halo, Kak %s", "nama"));
 
         // Tombol untuk menuju ke Profile
         Profile.setOnClickListener(new View.OnClickListener() {
