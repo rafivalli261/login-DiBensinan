@@ -14,11 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Profile extends AppCompatActivity {
 
     private FirebaseAuth ojoLali;
-    private TextView namaProfil;
     private Button btnLogout;
-    public static final String EXTRA_NAMA = "extra_age";
-    public static final String EXTRA_ALAMAT = "extra_alamat";
-    public static final String EXTRA_EMAIL = "extra_email";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +23,6 @@ public class Profile extends AppCompatActivity {
 
         ojoLali = FirebaseAuth.getInstance();
         btnLogout = findViewById(R.id.btn_Logout);
-        namaProfil = findViewById(R.id.nama_profile);
-
-        // fungsi untuk menampilkan Nama pada dashboard
-        tampilkanNama();
 
         // kode untuk sign out
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -41,11 +33,6 @@ public class Profile extends AppCompatActivity {
             }
         });
 
-    }
-
-    public void tampilkanNama(){
-        String nama = getIntent().getStringExtra(EXTRA_NAMA);
-        namaProfil.setText(nama);
     }
 
 }
