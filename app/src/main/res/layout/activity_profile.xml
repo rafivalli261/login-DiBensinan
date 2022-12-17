@@ -115,7 +115,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btn_Update"
+                android:id="@+id/btn_update"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"

@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth ojoLali;
     private EditText rxEmail, rxPassword;
     private int backButtonCount = 0;
+    private String idDokumenku;
     FirebaseFirestore db;
     FirebaseUser userSekarang;
 
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void queryDataUser(){
+    private void queryDataUser(){
         userSekarang = ojoLali.getCurrentUser();
 //        Query namaBerjaya = db.collection("penggunaHokya").whereIn("email", Arrays.asList(userSekarang.getEmail()));
         Query namaBerjaya = db.collection("penggunaHokya");
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                                     peranku = Objects.requireNonNull(document.getData().get("peran")).toString();
                                     emailku = Objects.requireNonNull(document.getData().get("email")).toString();
                                     alamatku = Objects.requireNonNull(document.getData().get("alamat")).toString();
+                                    idDokumenku = Objects.requireNonNull(document.getId());
                                 }
                             }
                             if (peranku.equals("user")){
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
                                 paketDashboard.putExtra(Dashboard.EXTRA_NAMA, namaku);
                                 paketDashboard.putExtra(Dashboard.EXTRA_EMAIL, emailku);
                                 paketDashboard.putExtra(Dashboard.EXTRA_ALAMAT, alamatku);
+                                paketDashboard.putExtra(Dashboard.EXTRA_ID_DOKUMEN, idDokumenku);
                                 startActivity(paketDashboard);
                             } else {
                                 ojoLali.signOut();
@@ -117,8 +120,8 @@ public class MainActivity extends AppCompatActivity {
             userNgeliyo.putExtra(Dashboard.EXTRA_NAMA, namaku);
             userNgeliyo.putExtra(Dashboard.EXTRA_EMAIL, emailku);
             userNgeliyo.putExtra(Dashboard.EXTRA_ALAMAT, alamatku);
+            userNgeliyo.putExtra(Dashboard.EXTRA_ID_DOKUMEN, idDokumenku);
             startActivity(userNgeliyo);
-
         }
     }
 
