@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
             android:layout_weight="0"
-            android:fontFamily="cursive"
+            android:fontFamily="@font/montserrat_bold"
             android:text="@string/jdl_pesan"
             android:textAlignment="center"
             android:textSize="24sp" />
@@ -32,6 +32,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/transparent"
+            android:fontFamily="@font/montserrat_bold"
             android:hint="@string/nama_user_pesan"
             android:inputType="text"
             android:minHeight="48dp"
@@ -40,6 +41,7 @@
 
         <EditText
             android:id="@+id/jns_bensin_pesan"
+            android:fontFamily="@font/montserrat_bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
@@ -55,6 +57,7 @@
         <EditText
             android:id="@+id/jml_bensin_pesan"
             android:layout_width="match_parent"
+            android:fontFamily="@font/montserrat_bold"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
@@ -72,6 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/transparent"
             android:hint="@string/no_hp_user_pesan"
@@ -84,6 +88,7 @@
             android:id="@+id/fl_loc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
@@ -96,6 +101,7 @@
 
         <EditText
             android:id="@+id/nama_mitra_pesan"
+            android:fontFamily="@font/montserrat_bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
@@ -113,6 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0"
+            android:fontFamily="@font/montserrat_bold"
             android:background="@color/teal_200"
             android:text="@string/btn_kirim"
             android:layout_margin="10dp"

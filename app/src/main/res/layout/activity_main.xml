@@ -29,15 +29,16 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="-40dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/logodibensinan" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-40dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
             android:text="Login To Your Account"
+            android:fontFamily="@font/montserrat_bold"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -58,6 +59,7 @@
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/transparent"
                 android:hint="@string/rx_email"
+                android:fontFamily="@font/montserrat_regular"
                 android:inputType="textEmailAddress"
                 android:padding="0dp"
                 android:textColor="@color/white"></EditText>
@@ -79,6 +81,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/transparent"
+                android:fontFamily="@font/montserrat_regular"
                 android:hint="@string/rx_password"
                 android:inputType="textPassword"
                 android:padding="0dp"
@@ -98,23 +101,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center_horizontal"
-            android:text="-Or Sign in With-"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/google_btn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
-            android:src="@drawable/google" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="120dp"
             android:layout_marginRight="50dp"
             android:gravity="center_horizontal"
             android:text="Dont Have An Account?"
