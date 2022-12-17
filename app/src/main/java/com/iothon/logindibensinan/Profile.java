@@ -58,6 +58,5 @@ public class Profile extends AppCompatActivity {
         inputUpdateAlamat.setText(alamat);
     }
 
-    
 
 }
