@@ -26,14 +26,15 @@
                 android:src="@drawable/profile" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:id="@+id/nama_in_profile"
                 android:layout_marginTop="170dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:includeFontPadding="false"
-                android:text="Anthonio Akbar"
-                android:textSize="20sp" />
+                android:text="@string/nama_user_pesan"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
         </RelativeLayout>
 
         <LinearLayout
@@ -48,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/bg_button_profile"
-                android:hint="Full Name">
+                android:hint="Full Name" >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -57,7 +58,8 @@
                     android:drawableLeft="@drawable/username_icon3"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="Anthonio Akbar" />
+                    android:text="Anthonio Akbar"
+                    android:id="@+id/input_update_nama" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -74,7 +76,8 @@
                     android:drawableLeft="@drawable/email_icon3"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="aanthonio19@gmail.com" />
+                    android:text="aanthonio19@gmail.com"
+                    android:id="@+id/input_update_email"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -107,7 +110,8 @@
                     android:drawableLeft="@drawable/address_icon3"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="Jalan Industri Dalam No.2/28A" />
+                    android:text="Jalan Industri Dalam No.2/28A"
+                    android:id="@+id/input_update_alamat"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
