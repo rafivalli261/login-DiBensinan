@@ -17,11 +17,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="-100dp"
+        android:layout_marginTop="-150dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/bg"
         android:orientation="vertical"
+        android:gravity="center"
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
@@ -48,7 +49,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_button_login"
-            android:orientation="horizontal">
+            android:orientation="horizontal" >
 
             <EditText
                 android:id="@+id/rx_email"
@@ -62,7 +63,7 @@
                 android:fontFamily="@font/montserrat_regular"
                 android:inputType="textEmailAddress"
                 android:padding="0dp"
-                android:textColor="@color/white"></EditText>
+                android:textColor="@color/white"/>
         </LinearLayout>
 
         <LinearLayout
@@ -85,7 +86,7 @@
                 android:hint="@string/rx_password"
                 android:inputType="textPassword"
                 android:padding="0dp"
-                android:textColor="@color/white"></EditText>
+                android:textColor="@color/white"/>
         </LinearLayout>
 
         <Button
@@ -93,31 +94,44 @@
             android:layout_width="180dp"
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="80dp"
+
             android:text="Login"
             android:background="@drawable/bg_button_login"
-            android:gravity="center_horizontal" />
+            android:gravity="center_horizontal"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:layout_marginRight="50dp"
-            android:gravity="center_horizontal"
-            android:text="Dont Have An Account?"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-        <TextView
-            android:id="@+id/tvRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_marginTop="-21dp"
-            android:layout_marginLeft="170dp"
-            android:gravity="center_horizontal"
-            android:textColor="@color/tema"/>
+            <TextView
+                android:id="@+id/do_u_have_an_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:text="Dont Have An Account?"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvRegister" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Sign Up"
+                android:textColor="@color/tema"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/do_u_have_an_account"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
 </LinearLayout>

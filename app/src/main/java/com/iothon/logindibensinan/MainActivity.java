@@ -25,6 +25,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.Map;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     private String idDokumenku;
     FirebaseFirestore db;
     FirebaseUser userSekarang;
+
+    // mencoba maping
+    private Map<String, Object> objekCoba;
 
     private String namaku, peranku, emailku, alamatku;
 
@@ -86,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
                                     alamatku = Objects.requireNonNull(document.getData().get("alamat")).toString();
                                     idDokumenku = Objects.requireNonNull(document.getId());
                                 }
+                                    objekCoba = (Map<String, Object>) document.getData();
+                                    Log.d("Ini Objeck Coba : ", objekCoba.toString());
                             }
                             if (peranku.equals("user")){
                                 Toast.makeText(MainActivity.this, "Pengguna berhasil login dengan aman", Toast.LENGTH_SHORT).show();
